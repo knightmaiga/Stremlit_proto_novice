@@ -7,10 +7,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import pickle
+import urllib.request
+url ='https://github.com/knightmaiga/Stremlit_proto_novice/raw/main/Salary_Data.csv'
+response = urllib.request.urlopen(url)
 
-
-data=pd.read_csv("C:/Users/knigh/Downloads/Salary_Data.csv")
-
+data=pd.read_csv(response)
 
 x=data['YearsExperience']
 
